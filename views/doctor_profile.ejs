@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!--PS Script starts-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-73564612-1', 'auto');
+	  ga('send', 'pageview');
+  </script>
+	<!--PS Script ends-->
+</head>
+<body>
+
+<div class="container">
+
+<div class="text-right">        
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+</div>
+
+<form action="" method="post">
+
+<table>
+
+<th class="text-danger">Address</th>
+<tr>
+<td><Label>Full Address: </Label></td>
+<td><input type="text" name="fulladdress" value=<%= doc.doctor.Address.FullAddress %>></input></td>
+</tr>
+<tr>
+<td><Label>PIN: </Label></td>
+<td><input type="text" name="pin" value=<%= doc.doctor.Address.Pin %>></input></td>
+</tr>
+<tr>
+<td><Label>City: </Label></td>
+<td><input type="text" name="city" value=<%= doc.doctor.Address.City %>></input></td>
+</tr>
+<tr>
+<td><label>Country: </label></td>
+<td><input type="text" name="country" value=<%= doc.doctor.Address.Country %>></input></td>
+</tr>
+<tr>
+<td><Label>Latitude: </Label></td>
+<td><input type="text" name="latitude" value=<%= doc.doctor.Address.Latitude %>></input></td>
+</tr>
+<tr>
+<td><Label>Longitude: </Label></td>
+<td><input type="text" name="longitude" value=<%= doc.doctor.Address.Longitude %>></input></td>
+</tr>
+
+<th class="text-danger">Awards</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="awardname" value=<%= doc.doctor.Award.Name %>></input></td>
+</tr>
+<tr>
+<td><label>Year: </label></td>
+<td><input type="text" name="awardyear" value=<%= doc.doctor.Award.Year %>></input></td>
+</tr>
+
+
+<th class="text-danger">Doctor's Details</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="docname" value=<%= doc.doctor.Details.Name %>></input></td>
+</tr>
+<tr>
+<td><label>Email: </label></td>
+<td><input type="text" name="docemail" value=<%= doc.doctor.Details.Email %>></input></td>
+</tr>
+<tr>
+<td><label>Password: </label></td>
+<td><input type="text" name="docpassword" value=<%= doc.doctor.Details.password %>></input></td>
+</tr>
+<tr>
+<td><label>Phone Number(Home): </label></td>
+<td><input type="text" name="docphonehome" value=<%= doc.doctor.Details.PhoneHome %>></input></td>
+</tr>
+<tr>
+<td><label>Phone Number(Office): </label></td>
+<td><input type="text" name="docphoneoffice" value=<%= doc.doctor.Details.PhoneOffice %>></input></td>
+</tr>
+<tr>
+<td><label>Mobile Number: </label></td>
+<td><input type="text" name="docmobile" value=<%= doc.doctor.Details.Mobile %>></input></td>
+</tr>
+<tr>
+<td><label>City: </label></td>
+<td><input type="text" name="doccity" value=<%= doc.doctor.Details.City %>></input></td>
+</tr>
+<tr>
+<td><label>Country: </label></td>
+<td><input type="text" name="doccountry" value=<%= doc.doctor.Details.Country %>></input></td>
+</tr>
+<tr>
+<td><label>Photo: </label></td>
+<td><input type="text" name="docphoto" value=<%= doc.doctor.Details.Photo %>></input></td>
+</tr>
+<tr>
+<td><label>Fee: </label></td>
+<td><input type="Number" name="docfee" value=<%= doc.doctor.Details.Fee %>></input></td>
+</tr>
+
+
+<th class="text-danger">MemberShip</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="membershipname" value=<%= doc.doctor.Membership.Name %>></input></td>
+</tr>
+
+
+<th class="text-danger">Organisation</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="orgname" value=<%= doc.doctor.Organisation.Name %>></input></td>
+</tr>
+<tr>
+<td><label>Phone: </label></td>
+<td><input type="text" name="orgphone" value=<%= doc.doctor.Organisation.Phone %>></input></td>
+</tr>
+<tr>
+<td><label>Mobile: </label></td>
+<td><input type="text" name="orgmobile" value=<%= doc.doctor.Organisation.Mobile %>></input></td>
+</tr>
+<tr>
+<td><label>Logo: </label></td>
+<td><input type="text" name="orglogo" value=<%= doc.doctor.Organisation.Logo %>></input></td>
+</tr>
+
+
+<th class="text-danger">Qualification</th>
+<tr>
+<td><label>Degree: </label></td>
+<td><input type="text" name="degree" value=<%= doc.doctor.Qualification.Degree %>></input></td>
+</tr>
+<tr>
+<td><label>College: </label></td>
+<td><input type="text" name="college" value=<%= doc.doctor.Qualification.College %>></input></td>
+</tr>
+<tr>
+<td><label>Year: </label></td>
+<td><input type="text" name="year" value=<%= doc.doctor.Qualification.Year %>></input></td>
+</tr>
+
+
+<th class="text-danger">Registration</th>
+<tr>
+<td><label>Registration Number: </label></td>
+<td><input type="text" name="regno" value=<%= doc.doctor.Registration.RegNumber %>></input></td>
+</tr>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="regname" value=<%= doc.doctor.Registration.Name %>></input></td>
+</tr>
+<tr>
+<td><label>Year: </label></td>
+<td><input type="text" name="regyear" value=<%= doc.doctor.Registration.Year %>></input></td>
+</tr>
+
+
+<th class="text-danger">Service</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="servicename" value=<%= doc.doctor.Service.Name %>></input></td>
+</tr>
+
+<th class="text-danger">Specialization</th>
+<tr>
+<td><label>Name: </label></td>
+<td><input type="text" name="specializationname" value=<%= doc.doctor.Specialization.Name %>></input></td>
+</tr>
+
+<tr >
+<td colspan="2">
+<button type="submit" id="updateprofile" formaction="profile">Update Profile</button>
+</td>
+</tr>
+
+
+</table>    
+</form>
+</div>
+</br>
+
+</body>
+</html>

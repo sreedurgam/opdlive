@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<div class="text-right">        
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+</div>
+
+<form action="/search" method="post">
+       <h1><span></span>Further Shortlisted Doctors List</h1>
+        <input type="text" placeHolder="Search by Name" name="search"></input>
+        <button type="submit" class="btn btn-warning btn-lg">Search</button>
+</form>
+<ul>	
+    <% doctors.forEach(function(doc){ %>
+    <div>
+    <li><h4 class="text-primary"><%= doc.name %></h4></li>
+    <b>Location</b>: <%= doc.location %><br/>
+    <b>Specialization</b>: <%= doc.specilisation %><br/>
+    <b>Fee</b>: <%= doc.fee %><br/>   
+    <a href="/call/<%= doc.id %>" class="btn btn-default">Call</a> 
+    <h1></h1>
+    <% }) %>  
+    </div>
+    </ul>  
+
+
+</div>
+<!--PS Script starts-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-73564612-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+    <!--PS Script ends-->
+
+</body>
+</html>
